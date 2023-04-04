@@ -83,11 +83,9 @@ function checkSpam() {
   containerInf.appendChild(finaldate);
 
   //Комментрайи
-  const comment = text.value;
-  let comment1 = comment.replace(/viagra/gi, "***");
-  let comment2 = comment1.replace(/XXX/gi, "***");
+  const comment = text.value.replace(/viagra/gi, "***").replace(/XXX/gi, "***");
   let finalComment = document.createElement("div");
   finalComment.className = "alert";
-  finalComment.textContent = comment2;
+  finalComment.textContent = comment;
   resultDiv.appendChild(finalComment);
 }
